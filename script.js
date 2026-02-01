@@ -1,7 +1,7 @@
 let slideIndex = 0;
 let autoPlay = setInterval(() => mudarSlide(1), 15000);
 
-const MINHA_CHAVE_PIX = "+5521988510351"; 
+const MINHA_CHAVE_PIX = "+5521988810509"; 
 const NOME_TITULAR = "NATHALIA E PHILIPPE"; 
 const CIDADE = "SAO GONCALO";
 

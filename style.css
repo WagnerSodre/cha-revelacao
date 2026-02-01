@@ -8,7 +8,7 @@ body {
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/bear.png');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/ursos2.jpeg');
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -20,8 +20,17 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero p { font-size: 1.5rem; }
+.hero h1 { 
+    margin-bottom: 10px; 
+    font-family: 'Dancing Script', cursive;
+    color: #E3A08E; /* A cor salmão que identificamos na imagem */
+    font-size: 3.5rem;
+    font-weight: 700;-webkit-text-stroke: 0.1px black;
+}
+.hero p { 
+    font-size: 2rem; 
+    font-family: 'Dancing Script', cursive;-webkit-text-stroke: 0.1px black;
+}
 
 .welcome-section {
     padding: 50px 20px;

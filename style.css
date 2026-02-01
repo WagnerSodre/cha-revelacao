@@ -1,0 +1,412 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+/* Hero Section (A parte principal com a imagem) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('assets/bear.png'); /* Substitua pela URL da foto do casal */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero p { font-size: 1.5rem; }
+
+/* Seção de Contagem Regressiva */
+.countdown {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.info-section {
+    padding: 40px 20px;
+}
+.time-box {
+    background: #fce4ec; /* Rosa claro */
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 80px;
+}
+.time-box span { display: block; font-size: 2rem; font-weight: bold; color: #ad1457; }
+
+/* Seção de Informações */
+.welcome-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn-confirmar {
+    background-color: #81d4fa; /* Azul claro */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.btn-confirmar:hover { background-color: #4ba3d7; }
+
+/* Grid de Presentes (Simulação) */
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.gift-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+.gift-card img { width: 100%; border-radius: 5px; }
+
+.carousel-container {
+    position: relative;
+    max-width: 500px; /* Largura máxima fixa */
+    height: 400px;    /* Altura fixa */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.carousel-slide, .item {
+    height: 100%; /* Garante que o item ocupe a altura do container */
+}
+
+/* Esconde todos os itens por padrão */
+.item {
+    display: none;
+    height: 100%;
+}
+
+/* Mostra APENAS o item que tiver a classe active */
+.item.active {
+    display: block !important;
+}
+
+.carousel-slide img, 
+.carousel-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isso mantém a proporção sem distorcer */
+    display: block;
+}
+
+.carousel-slide .item.active {
+    display: block; /* Mostra apenas o ativo */
+}
+
+/* Botões */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 100; /* Garante que o botão fique por cima da imagem e do vídeo */
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover { background: #fff; }
+
+/* Estilo do Popup */
+.popup-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+
+.popup-content img, .popup-content video {
+    width: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.fechar-popup {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-container {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    text-align: left; /* Alinha o texto à esquerda conforme a imagem */
+}
+
+.info-row {
+    display: flex;
+    align-items: center; /* Alinha o ícone verticalmente ao centro do texto */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-icon-img {
+    width: 35px; /* Tamanho ajustado dos ícones */
+    height: 35px;
+    object-fit: contain;
+}
+
+.address-text p {
+    margin: 2px 0; /* Espaçamento curto entre as linhas do endereço */
+}
+
+.info-row p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #444;
+}
+
+.waze-icon {
+    width: 30px;
+    margin-left: auto; /* Joga o ícone do Waze para o final da linha */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.waze-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Ajuste do Mapa para mobile */
+.map-container {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+/* Ajuste no botão de confirmar para destacar */
+.btn-confirmar {
+    background-color: #81d4fa;
+    color: white;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(129, 212, 250, 0.4);
+}
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gift-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.gift-card:hover { transform: translateY(-5px); }
+
+.gift-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.btn-presentear {
+    background-color: #fce4ec; /* Rosa */
+    color: #ad1457;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo do Modal Pix */
+.pix-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+#qrcode-img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+}
+
+.chave-pix-box {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.chave-pix-box button {
+    background: #81d4fa;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pix-copia-cola-container {
+    margin-top: 15px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+#input-copia-cola {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background: transparent;
+    font-family: monospace;
+    font-size: 11px;
+    color: #666;
+    resize: none;
+    margin-bottom: 10px;
+    word-break: break-all;
+    outline: none;
+}
+
+#btn-copiar-pix {
+    width: 100%;
+    background-color: #81d4fa;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Estilização do Footer */
+.custom-footer {
+    background-color: #1a1a1a; /* Fundo escuro elegante */
+    padding: 60px 20px;
+    color: #ffffff;
+    text-align: center;
+    border-top: 4px solid #ff4d4d; /* Linha de destaque vermelha */
+}
+
+.dedication {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #cccccc;
+    letter-spacing: 1px;
+}
+
+.developer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.brand-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column; /* Para empilhar o logo e o link */
+    align-items: center;
+    gap: 5px; /* Espaço entre o logo e o texto do link */
+    transition: transform 0.3s ease;
+}
+
+.brand-link:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o rato */
+}
+
+.red-dices-logo {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: -15px; /* Espaço entre o logo e o link de URL */
+}
+
+.red-dices-text {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+    transition: opacity 0.3s;
+    font-weight: 400; /* Extra Bold */
+    color: #ffffff;
+}
+
+.brand-text-link {
+    color: #ccc; /* Cor do link */
+    font-size: 0.9rem;
+    text-decoration: underline; /* Sublinhado para indicar que é um link */
+}
+
+/* Animação para o link (opcional, mas legal para indicar que é clicável) */
+.brand-text-link:hover {
+    color: #ff4d4d; /* Mude a cor ao passar o mouse */
+}

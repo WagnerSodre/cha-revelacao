@@ -36,7 +36,7 @@ function cliqueManual(n) {
 }
 
 function atualizarContador() {
-    const dataEvento = new Date("2026-02-08T12:30:00").getTime();
+    const dataEvento = new Date("2026-06-12T09:00:00").getTime();
     
     setInterval(function() {
         const agora = new Date().getTime();

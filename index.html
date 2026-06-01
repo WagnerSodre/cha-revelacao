@@ -6,60 +6,81 @@
     <title>Chá de Revelação - Nath e Ph</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- ===== HERO / HEADER ===== -->
     <header class="hero">
-        <h1>Arraiá & Chá de Fraldas do Pedro Henrique</h1>
+        <div class="hero-content">
+        </div>
     </header>
 
+    <!-- ===== ESTRELAS FLUTUANTES ===== -->
+    <div class="floating-stars">
+        <span class="star">⭐</span>
+        <span class="star">✨</span>
+        <span class="star">⭐</span>
+        <span class="star">✨</span>
+        <span class="star">⭐</span>
+        <span class="star">✨</span>
+        <span class="star">⭐</span>
+    </div>
+
+    <!-- ===== BOAS-VINDAS ===== -->
     <section class="welcome-section">
-        <h2>Ó o Arraiá do Pedro Henrique aí, sô! 🎉🔥</h2>
+        <h2>A mamãe Nathália Sodré e o papai Philippe Padula<br>convidam você para o Arraiá & Chá de Fraldas</h2>
         <p>A fogueira já tá acesa, as bandeirinhas tão no alto e os nossos corações já estão transbordando de alegria e amor!</p>
         <p>Para celebrar a chegada do nosso pequeno Pedro Henrique, resolvemos juntar duas coisas que a gente ama demais: o clima gostoso de Festa Junina e o chamego de um Chá de Fraldas. Vai ter pipoca, paçoca, bolo de milho, muita brincadeira e, claro, muito amor envolvido!</p>
         <p>Sua presença é o nosso maior presente para deixar essa festança ainda mais especial. Veste sua camisa xadrez, prepara o sorriso e vem pular a fogueira com a gente!</p>
     </section>
 
+    <!-- ===== COUNTDOWN ===== -->
     <section class="countdown">
         <div class="time-box">
             <span id="days">00</span>
-            Dias
+            <span class="time-label">Dias</span>
         </div>
         <div class="time-box">
             <span id="hours">00</span>
-            Horas
+            <span class="time-label">Horas</span>
         </div>
         <div class="time-box">
             <span id="mins">00</span>
-            Mins
-        </div>        
+            <span class="time-label">Minutos</span>
+        </div>
     </section>
 
+    <!-- ===== INFORMAÇÕES ===== -->
     <section class="info-section">
-        <div class="info-container">
-            <div class="info-row">
-                <img src="https://cdn-icons-png.flaticon.com/512/2278/2278049.png" class="info-icon-img" alt="Calendário">
-                <p>12/06/2026</p>
-            </div>
-            
-            <div class="info-row">
-                <img src="https://cdn-icons-png.flaticon.com/512/109/109613.png" class="info-icon-img" alt="Relógio">
-                <p>09:00 às 12:00</p>
-            </div>
+        <div class="info-card">
+            <h3 class="info-card-title">📋 Informações</h3>
+            <div class="info-container">
+                <div class="info-row">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2278/2278049.png" class="info-icon-img" alt="Calendário">
+                    <p>12/06/2026</p>
+                </div>
 
-            <div class="info-row">
-                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="info-icon-img" alt="Local">
-                <div class="address-text">
-                    <p><strong>Cafeteria do Primeiro Andar</strong></p>
-                    <p>Ed. Lubrax</p>
+                <div class="info-row">
+                    <img src="https://cdn-icons-png.flaticon.com/512/109/109613.png" class="info-icon-img" alt="Relógio">
+                    <p>09:00 às 12:00</p>
+                </div>
+
+                <div class="info-row">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="info-icon-img" alt="Local">
+                    <div class="address-text">
+                        <p><strong>Cafeteria do Primeiro Andar</strong></p>
+                        <p>Ed. Lubrax</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
     <section class="gifts-section">
-        <h2>Sugestões de Presentes</h2>
+        <h2>🎁 Sugestões de Presentes</h2>
+        <p class="gifts-subtitle">Fraldas Pampers Premium Care — tamanho M ou G</p>
         <div class="gift-grid">
             <div class="gift-card">
                 <img src="assets/fraldas.jpg" alt="Fraldas">
@@ -89,6 +110,8 @@
                 <button class="btn-presentear" onclick="abrirPix(130.00, 'Kit Brinquedo e Fraldas')">Presentear</button>
             </div>
         </div>
+
+        <a href="https://www.amazon.com.br/baby-reg/nathlia-sodr-julho-2026-riodejaneiro/32UQMKVINZ7G6?ref_=cm_sw_r_apin_dp_DDEBJQ06D87X031KPP2D&language=en-US" target="_blank" class="btn-amazon">Confira a lista da Amazon</a>
     </section>
 
     <div id="pix-modal" class="popup-overlay" onclick="fecharPix()">

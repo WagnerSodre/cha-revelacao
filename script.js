@@ -130,11 +130,11 @@ function copiarCopiaCola() {
 
     const originalText = btn.innerText;
     btn.innerText = "Copiado! ✅";
-    btn.style.backgroundColor = "#4caf50";
+    btn.style.background = "linear-gradient(135deg, #6ba87a, #5a9970)";
 
     setTimeout(() => {
         btn.innerText = originalText;
-        btn.style.backgroundColor = "#81d4fa";
+        btn.style.background = "";
     }, 2000);
 }
 
@@ -149,5 +149,9 @@ document.addEventListener('keydown', function(e) {
         fecharPopup();
     }
 });
+
+function confirmarPresenca() {
+    alert("Obrigado! Sua presença foi registrada. Te esperamos no Arraiá do Pedro Henrique! 🎉");
+}
 
 atualizarContador();

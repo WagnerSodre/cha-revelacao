@@ -3,7 +3,7 @@ let autoPlay = setInterval(() => mudarSlide(1), 15000);
 
 const MINHA_CHAVE_PIX = "+5521988810509"; 
 const NOME_TITULAR = "NATHALIA E PHILIPPE"; 
-const CIDADE = "SAO GONCALO";
+const CIDADE = "RIO DE JANEIRO";
 
 function mudarSlide(n) {
     const slides = document.querySelectorAll(".carousel-slide .item");

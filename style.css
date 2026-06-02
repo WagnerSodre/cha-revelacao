@@ -132,6 +132,7 @@ body {
     line-height: 1.7;
     margin: 8px 0;
     color: #6b5d4f;
+    text-wrap: balance;
 }
 
 .welcome-section .divider {
